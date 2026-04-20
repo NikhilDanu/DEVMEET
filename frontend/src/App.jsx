@@ -11,7 +11,7 @@ import GetTeam from "./pages/GetTeam";
 import Hackathons from "./pages/Hackathon";
 import CreateHackathon from "./pages/createHackathon";
 import Home from "./pages/Home";
-import Chat from "./pages/chat";
+import Chat from "./pages/Chat";
 function App() {
   return (
     <BrowserRouter>
