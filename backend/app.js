@@ -11,7 +11,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: process.env.CLIENT_URL || "https://devmeet-73rj.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
   },
@@ -20,7 +20,7 @@ const io = new Server(server, {
 app.use(express.json());
 
 app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:5173",
+  origin: process.env.CLIENT_URL || "https://devmeet-73rj.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
