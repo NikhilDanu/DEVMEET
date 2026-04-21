@@ -8,8 +8,8 @@ const { Server } = require("socket.io");
 const app = express();
 const server = http.createServer(app);
 const allowedOrigins = [
-  "https://devmeet-73rj.vercel.app",
-  "http://localhost:5173"
+  "https://devmeet-sage.vercel.app",
+  "https://devmeet-sfzi.onrender.com",
 ];
 app.use(cors({
   origin: function (origin, callback) {
@@ -45,8 +45,6 @@ const connectDB = async () => {
   }
 };
 connectDB();
-
-// 🔹 Routes
 app.use("/api/auth", require("./routes/auth.routes"));
 app.use("/api/profile", require("./routes/profile.routes"));
 app.use("/api/team", require("./routes/team.routes"));
@@ -54,7 +52,6 @@ app.use("/api/hackathon", require("./routes/hackathon.routes"));
 app.use("/api/conversation", require("./routes/conversation.routes"));
 app.use("/api/message", require("./routes/message.route"));
 
-// 🔹 Socket events
 io.on("connection", (socket) => {
   console.log("User connected:", socket.id);
 
