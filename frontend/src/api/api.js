@@ -2,6 +2,7 @@ import axios from "axios";
 
 const API = axios.create({
   baseURL: "https://devmeet-sfzi.onrender.com/api",
+  withCredentials: true,
 });
 
 API.interceptors.request.use(
